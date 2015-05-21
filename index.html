@@ -3,17 +3,26 @@ layout: default
 ---
 
 <div class="home">
+  <div>
+    <p><b>Biera Solutions</b> es una pequeña agencia de desarrollo de software fundada a inicios de 2014 por <a href="http://www.danilat.com">Dani Latorre</a> tras varios años dando servicios de freelance. </p>
 
-  <h1 class="page-heading">Projectos</h1>
+    <p>Nos gusta crear productos propios pero también trabajar para terceros.</p>
 
-  <ul class="post-list">
+    <p>Podemos ayudarte trabajando sobre un MVP durante unas pocas semanas, desarrollar un proyecto durante varios meses o echar una mano dentro de tu equipo.</p>
+  </div>
 
-    {% for page in site.pages %}
-      <li>
-        <h2>
-          <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+  <div>
+    <h2 class="page-heading">Algunos de los proyectos en los que hemos trabajado:</h2>
+
+    <ul class="post-list">
+
+      {% for page in site.pages %}
+        <li>
+          <h3>
+            <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          </h3>
+        </li>
+      {% endfor %}
+    </ul>
+  <div>
 </div>
