@@ -12,16 +12,18 @@ layout: default
   </div>
 
   <div>
-    <h2 class="page-heading">Algunos de los proyectos en los que hemos trabajado:</h2>
+    <h2>Algunos de los proyectos en los que hemos trabajado:</h2>
 
-    <ul class="post-list">
+    <ul>
 
-      {% for page in site.pages %}
+      {% for page in site.html_pages %}
+        {% if page.title and page.title != "" %}
         <li>
           <h3>
-            <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+            <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
           </h3>
         </li>
+        {% endif %}
       {% endfor %}
     </ul>
   <div>
